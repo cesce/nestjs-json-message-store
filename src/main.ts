@@ -7,8 +7,8 @@ const logger = new Logger('Main');
 
 async function bootstrap() {
   const app = await NestFactory.create(MessagesModule, {
-    logger: ['log'],
+    logger: ['log', 'debug'],
   });
   await app.listen(PORT);
 }
-bootstrap().then(() => logger.log(`Starting Application on PORT: ${PORT}`));
+bootstrap().then(() => logger.debug(`Starting Application on PORT: ${PORT}`));
