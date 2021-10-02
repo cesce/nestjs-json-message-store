@@ -40,13 +40,6 @@ $ npm run test:e2e
 $ npm run test:cov
 ```
 
-## Routes
-
-| Route | Parameters | Description                  |
-| ----- | ---------- | ---------------------------- |
-| /     | none       | List all the stored messages |
-| /     | {id}       | Retrieve a message by its ID |
-
 ## License
 
 Nest is [MIT licensed](LICENSE).
