@@ -10,6 +10,7 @@ export class MessagesController {
 
   @Get()
   listMessages() {
+    this.logger.debug(`/messages`);
     return 'A list of messages';
   }
 }
