@@ -1,4 +1,4 @@
-import { Controller, Get, Logger } from '@nestjs/common';
+import { Controller, Get, Logger, Post } from '@nestjs/common';
 
 @Controller('messages')
 export class MessagesController {
@@ -12,5 +12,17 @@ export class MessagesController {
   listMessages() {
     this.logger.debug(`/messages`);
     return 'A list of messages';
+  }
+
+  @Post()
+  createMessage() {
+    this.logger.debug(`/messages`);
+    return 'Message created';
+  }
+
+  @Get('/:id')
+  getMessage() {
+    this.logger.debug(`/messages`);
+    return 'A message';
   }
 }
