@@ -1,6 +1,8 @@
+import { Injectable } from '@nestjs/common';
 import { readFile, writeFile } from 'fs/promises';
 
-export class MessageRepository {
+@Injectable()
+export class MessagesRepository {
   //We need to read a file off the hard drive, I/O operations, so all of that type must be async functions
 
   async findOne(id: string) {
